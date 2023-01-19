@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snake games</title>
+    <style>
+        .container {
+            background-color: red;
+            height: 43rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /* grid-template-columns: repeat(12, 1fr); */
+
+            
+        }
+        .box {
+            background-color: aqua;
+            height: 33rem;
+            width: 50%;
+            display: grid;
+            grid-template-columns: repeat(19, 1fr);
+            grid-template-rows: repeat(14, 1fr);
+      
+            
+        }
+
+        .snakeHead {
+  
+            background-color: black;
+            z-index: 2;
+            border-radius: 10px;
+        }
+
+        .snakeFood {
+            background-color:  gray;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box">
+            
+        </div>
+    </div>
+    <div class="button">
+        <button class="btn">Play</button>
+    </div>
+    
+
+
+    <script>
+
+        const contianer = document.getElementsByClassName('box')[0];
+        const button = document.getElementsByClassName('btn')[0];
+        let speed = 300;
+
+        let snakeHead = [
+          
+            {
+                x: 9,
+                y: 11
+            }
+        ]
+
+
+        let snakeFood =
+         [
+            {
+                x:6,
+                y: 6
+            }
+        ]
+        
+
+        let direction = {x:1 , y:0}
+        
+
+
+function snakeEat() {
+snakeFood =[
+    {
+        x: Math.floor(Math.random()* 10),
+        y : Math.ceil(Math.random()* 12)
+    }
+]
+//    snakeHead.push(snakeHead)
+// snakeHead.push({x:snakeHead[0].x += direction.x ,y:snakeHead[0].y += direction.y});
+// snakeHead
+const change = {x:snakeHead[0].x += direction.x,
+        
+        y:snakeHead[0].y += direction.y
+}
+snakeHead.push(change);
+speed--
+snakeHead.style.backgroundColor = 'red'
+
+
+}
+
+
+function moveSnake() {
+    // debugger
+    // debugger
+
+
+
+   if(snakeHead[0].x == snakeFood[0].x && snakeHead[0].y == snakeFood[0].y) {
+    snakeEat()
+   }
+ 
+
+   for(let a = snakeHead.length-2; a>= 0; a--) {
+    console.log(a)
+    debugger
+    console.log(snakeHead[a+1] = {...snakeHead[a]})
+   
+    
+
+ 
+   }
+    snakeHead[0].x += direction.x;
+        
+        snakeHead[0].y += direction.y;
+
+   
+        contianer.innerHTML = '';
+
+
+
+
+ 
+    
+// console.log(snakeHead)
+
+snakeHead.forEach((current, index) => {
+let snake = document.createElement('div');
+snake.classList.add('snakeHead');
+
+snake.style.gridRowStart = current.y;
+snake.style.gridColumnStart = current.x;
+
+contianer.append(snake);
+// console.log(contianer.length);
+
+ 
+})
+
+
+snakeFood.forEach((current) => {
+let food = document.createElement('div');
+
+    food.classList.add('snakeFood');
+
+food.style.gridRowStart = current.y;
+food.style.gridColumnStart = current.x;
+
+contianer.append(food);
+})
+
+
+
+
+
+}
+moveSnake()
+
+
+// button.addEventListener('click', (e) => {
+ 
+// })
+
+
+
+
+
+button.onclick = function() {
+
+    setInterval(moveSnake, speed)
+}
+
+
+
+        window.addEventListener('keydown', (e) => {
+           
+            console.log(e.key)
+            switch(e.key){
+                case 'ArrowUp': 
+                    direction = {x: 0, y: -1}
+
+
+     
+                    break;
+
+                    case 'ArrowDown':
+                    direction = {x: 0, y: 1}
+     
+                    break;
+
+                    
+                    case 'ArrowLeft':
+                    direction = {x: -1, y: 0}
+
+     
+                    break;
+
+                    case 'ArrowRight':
+                    direction = {x: 1, y: 0}
+         
+                    break;
+                    default:
+                        return; 
+            }
+   
+        })
+    </script>
+</body>
+</html>

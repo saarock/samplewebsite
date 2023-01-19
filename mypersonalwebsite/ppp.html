@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>
+        To fetch the api...
+        </h1>
+        <button onclick="doS()">Click</button>
+        <script>
+
+
+
+function doS() {
+
+
+
+    async function getData() {
+                let res = await fetch('http://localhost:8000/info').then(data => data.json()).then((data) => {
+                    console.log(data)
+                    document.write(data)
+                    alert(data)
+                    
+                }).catch((error) => {
+                    console.log(error)
+                })
+                document.write(res)
+            }
+
+
+           
+
+}
+          
+        </script>
+</body>
+</html>

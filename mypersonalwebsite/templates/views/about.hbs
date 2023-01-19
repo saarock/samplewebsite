@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my personal website</title>
+    {{!-- <link rel="stylesheet" href="./css/style.css" /> --}}
+    <style>
+        body {
+    /* background-color: red; */
+    padding: 0;
+    margin: 0;
+}
+.container {
+    /* background-color: red; */
+    
+}
+
+.navbars {
+    display: flex;
+    /* background-color: blue; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 4rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navs {
+list-style-type: none;
+margin-left: 2rem;
+
+
+
+
+}
+
+
+.nav {
+    text-decoration: none;
+    /* display: flex; */
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+ 
+}
+
+.nav:hover {
+
+    text-decoration: underline;
+}
+
+
+
+.profilMain{
+    /* background-color: red; */
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profil {
+    background-color: antiquewhite;
+    height: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+}
+
+
+.name {
+    font-weight: bold;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.photoupload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+    background-color: aqua;
+    height: 8rem;
+}
+
+
+.uploadphoto{
+   /* display: none; */
+
+}
+
+
+.upload {
+    background-color: aquamarine;
+    height: 3rem;
+    width: 8rem;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+font-weight: bold;
+font-size: 16px;
+
+}
+
+.myuploadphoto {
+    /* background-color: red; */
+    /* height: 12rem; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    
+}
+
+.photo {
+    background-color: red;
+    height: 12rem;
+    border: 2px solid black;
+    height: 12rem;
+    /* margin: rem 2rem 2rem 2rem; */
+    margin-top: 3rem;
+    margin-left: 3rem;
+
+    width: 12rem;
+}
+
+.whole {
+    background-color: green;
+    height: 23rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.alltheimage {
+    background-color: red;
+    height: 32rem;
+    position: absolute;
+    /* top: -32rem; */
+    width: 42rem;
+    /* z-index: 2; */
+    display: none   ;
+   
+    /* right: 22rem; */
+    /* left: 2rem; */
+}
+
+.all {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+
+.myImages {
+    background-color: aqua;
+    height: 22rem;
+    width: 23rem;
+    margin-top: 2rem;
+    
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <ul class="navbars">
+          <li class="navs"><a href="#home" class="nav">HOME</a></li>
+          <li class="navs"><a href="singin.hbs" class="nav">CONTACT</a></li>
+          <li class="navs"><a href="#services" class="nav">SERVICES</a></li>
+          <li class="navs"><a href="#about" class="nav">ABOUT</a></li>
+          <li class="navs"><a href= "/singin" class="nav">SINGIN</a></li>
+          <li class="navs"><a href="/singin" class="nav">LOGIN</a></li>
+        </ul>
+      </div>
+
+      <main>
+        <section>
+          <div class="profilMain">
+            <div class="profil">
+              <img src="" alt="myphoto" />
+            </div>
+            <div class="name">{{lname}}</div>
+            <h1>{{email}}</h1>
+            <h1>{{lastname}}</h1>
+            <h1>{{_id}}</h1>
+          </div>
+
+          <div class="photoupload">
+        
+            <div class="alltheimage">
+              <div class="all">
+                      <button class="showImage">SELECT FILE</button>
+                <img src="" alt="myImage" class="myImages" >
+             
+                <form action="/upload"  method="post" enctype="multipart/form-data">
+  
+                    <input type="file" class="uploadphoto" name="image" />
+                     
+                      <input type="text"  class="shoImages" name="name">
+                       <input type="submit" value="Post" class="showMyImages" >
+            
+
+
+                </form>
+              
+
+                
+              </div>
+            </div>
+
+            <button class="upload">upload file</button>
+          </div>
+
+          <div class="myuploadphoto">
+            <img src="" class="photo"></img>
+            <div class="photo"></div>
+            <div class="photo"></div>
+            <div class="photo"></div>
+          </div>
+        </section>
+      </main>
+
+      <!-- <div class="whole"> -->
+      <!-- <div class="alltheimage">
+    
+</div> -->
+      <!-- </div> -->
+      <!-- <div>asn</div> -->
+      {{!-- <h1>{{baby}}</h1> --}}
+    </header>
+    <script src="./js//index.js"></script>
+  </body>
+</html>

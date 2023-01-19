@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .login {
+            display: flex;
+            background-color: blue;
+            height: 40rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+    
+        #form {
+            /* height: 22rem; */
+            background-color: aqua;
+            display: flex;
+            flex-direction: column;
+         
+           
+        }
+
+        .loginInput {
+            width: 24rem;
+            height: 3rem;
+        }
+
+        .loginButton {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 1rem 0 0 0;
+        }
+        #submitLogin {
+            background-color: antiquewhite;
+            border: none;
+            height: 2rem;
+            width: 6rem;
+            font-weight: bold;
+    
+        }
+
+        .llll {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 1rem;
+        }
+
+
+        .h1login {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="smalllogin">
+            <h1 class="h1login">Login</h1>
+            <form action="/singin" method="POST" id="form">
+            <label for="email" class="llll">email</label>
+            <input type="email" id="email" name="email" class="loginInput">
+
+            <label for="password" class="llll">password</label>
+
+
+            <input type="password" name="password" id="password" class="loginInput">
+            <div class="loginButton">
+            <input type="submit" id="submitLogin" value="submit">
+            </div>
+        </form>
+        </div>
+    </div>
+</body>
+</html>

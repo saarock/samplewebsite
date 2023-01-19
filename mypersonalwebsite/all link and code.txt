@@ -1,0 +1,171 @@
+1) => Important javscript code for execCommand('Copy').
+
+[...btn].forEach((button) => { 
+button.addEventListener('mouseover', (e) => {
+console.log('aweofh');
+e.target.classList.add('hover');
+button.addEventListener('mouseleave', () => {
+e.target.classList.remove('hover');
+     
+button.addEventListener('click', () => { 
+ Array.from(code).forEach((c) => {
+let code = document.querySelector('.baby1');
+code.select();
+document.execCommand("Copy");
+document.getSelection().removeAllRanges();
+})
+ })
+
+
+
+
+
+
+  2) => //link to use free photo.
+https://stocksnap.io/
+
+
+
+
+ 3) => //for CSS boxshadow
+ https://getcssscan.com/css-box-shadow-examples
+
+
+
+
+4) => //Learn expressJs
+https://expressjs.com/en/starter/hello-world.html
+
+
+5) => //Font awesome CDN link.
+https://cdnjs.com/libraries/font-awesome/5.10.0
+
+
+
+6) => /Array imporatant method to search.
+i) => find().
+ii) => findIndex().
+
+
+
+7) => //expressJs sample code.
+i) => app.get('/services', (req,res) => {
+res.render('services')
+})
+
+
+
+
+
+ii) => //Another express imporatant sample code.
+st express = require('express');
+const app = express();
+const path = require('path');
+const hbs = require('hbs');
+// const { url } = require('inspector');
+const port = 8000;
+
+
+const staticPath = path.join(__dirname, '../public');
+const templatesPath = path.join(__dirname, '');
+// const particalPath = path.join(__dirname, '../templates/particals');
+
+//view engine
+app.set('view engine', 'hbs');
+
+// hbs.registerPartials(particalPath)
+app.set('views', templatesPath);
+app.get('', (req,res) => {
+    res.render('index')
+});
+
+
+
+app.use(express.static(staticPath));
+// hbs.registerPartials(particalPath);
+
+
+
+    app.get('/services', (req,res) => {
+        res.render('services')
+    })
+
+    app.get('/about', (req,res) => {
+        res.render('about');
+        });
+        
+app.get('*', (req,res) => {
+    res.render('404error');
+    });
+
+
+
+
+8) => // w3school nodejs.
+https://www.w3schools.com/nodejs/nodejs_mysql.asp
+
+
+
+9) => video edit software
+https://www.kapwing.com/video-editor
+
+
+
+
+10) another video editor
+https://www.canva.com/design/DAFRsgtBYls/NsKwunZnKW3IRwiFAPxvIQ/edit
+
+
+https://editor.flixier.com/projects/7f166630-0fd6-c75e-8606-cf6c66dad5a2
+
+
+
+best video my love
+https://app.clipchamp.com/editor/dfc04f69-3208-4e09-8c9f-6362897ace49/export
+
+
+
+
+//express js 
+https://codersdaily.in/courses/expressjs-nodejs/expressjs-fileupload
+
+
+
+
+//world cup
+https://live.shoot-yalla.tv/world-cup/
+
+
+
+
+
+
+
+
+//pratice mongo connection
+
+ mongoose.connect("mongodb://127.0.0.1/students",{
+
+
+    //api get post
+    https://jsonplaceholder.typicode.com/
+
+
+
+
+
+    //have to read JavaScript important topic
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+
+
+
+
+
+
+    mongodb+srv://<username>:<password>@cluster0.to5rpd6.mongodb.net/?retryWrites=true&w=majority
+
+    mongodb+srv://<username>:<password>@cluster0.to5rpd6.mongodb.net/test
+
+
+    //To keep the passowrd secure in node js.
+    https://blog.logrocket.com/implementing-a-secure-password-reset-in-node-js/
